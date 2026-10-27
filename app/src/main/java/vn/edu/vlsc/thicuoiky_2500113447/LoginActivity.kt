@@ -1,5 +1,6 @@
 package vn.edu.vlsc.thicuoiky_2500113447
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Patterns
@@ -33,6 +34,16 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        // Khi quay trở lại từ ProfileActivity sau khi Đăng xuất:
+        // Cập nhật thông báo đăng xuất thành công hoặc trạng thái sẵn sàng
+        if (tvStatus.text == getString(R.string.login_success)) {
+            tvStatus.setTextColor(Color.parseColor("#1976D2"))
+            tvStatus.text = "Đã đăng xuất thành công!"
+        }
+    }
+
     private fun handleLogin() {
         val email = edtEmail.text.toString().trim()
         val password = edtPassword.text.toString().trim()
@@ -58,8 +69,13 @@ class LoginActivity : AppCompatActivity() {
             return
         }
 
-        // Dữ liệu hợp lệ
+        // Dữ liệu hợp lệ: Cập nhật thông báo và chuyển màn hình qua Explicit Intent
         tvStatus.setTextColor(Color.parseColor("#2E7D32"))
         tvStatus.text = getString(R.string.login_success)
+
+        val intent = Intent(this, ProfileActivity::class.java).apply {
+            putExtra("EXTRA_EMAIL", email)
+        }
+        startActivity(intent)
     }
 }
