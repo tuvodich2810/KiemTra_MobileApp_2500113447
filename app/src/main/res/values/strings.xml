@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ThiCuoiKy_MobileApp_2500113447</string>
+    <string name="login_title">ĐĂNG NHẬP HỆ THỐNG</string>
+    <string name="email_hint">Nhập địa chỉ email</string>
+    <string name="password_hint">Nhập mật khẩu (tối thiểu 6 ký tự)</string>
+    <string name="btn_login">Đăng nhập</string>
+    <string name="profile_title">Hồ sơ cá nhân</string>
+    <string name="profile_email_label">Email đăng nhập:</string>
+    <string name="btn_logout">Đăng xuất</string>
+    <string name="error_empty">Vui lòng điền đầy đủ Email và Mật khẩu</string>
+    <string name="error_invalid_email">Email không đúng định dạng!</string>
+    <string name="error_password_length">Mật khẩu phải từ 6 ký tự trở lên!</string>
+    <string name="login_success">Đăng nhập hợp lệ</string>
+</resources>

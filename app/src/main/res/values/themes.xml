@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.ThiCuoiKy_MobileApp_2500113447" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="android:statusBarColor">@color/bg_screen</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>
